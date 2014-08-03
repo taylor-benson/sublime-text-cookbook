@@ -1,10 +1,10 @@
-# .-cookbook
+# sublime-text-cookbook
 
-TODO: Enter the cookbook description here.
+Cookbook for installing Sublime Text
 
 ## Supported Platforms
 
-TODO: List your supported platforms.
+* Ubuntu 14.04
 
 ## Attributes
 
@@ -15,24 +15,18 @@ TODO: List your supported platforms.
     <th>Description</th>
     <th>Default</th>
   </tr>
-  <tr>
-    <td><tt>['.']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
 </table>
 
 ## Usage
 
-### .::default
+### sublime-text::default
 
-Include `.` in your node's `run_list`:
+Include `sublime-text` in your node's `run_list`:
 
 ```json
 {
   "run_list": [
-    "recipe[.::default]"
+    "recipe[sublime-text::default]"
   ]
 }
 ```
@@ -48,4 +42,4 @@ Include `.` in your node's `run_list`:
 
 ## License and Authors
 
-Author:: YOUR_NAME (<YOUR_EMAIL>)
+Author:: Patrick Ayoup (patrick.ayoup@gmail.com)
