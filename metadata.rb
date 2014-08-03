@@ -1,10 +1,8 @@
-name             '.'
-maintainer       'YOUR_NAME'
-maintainer_email 'YOUR_EMAIL'
-license          'All rights reserved'
-description      'Installs/Configures .'
-long_description 'Installs/Configures .'
+name             'sublime-text'
+maintainer       'Patrick Ayoup'
+maintainer_email 'patrick.ayoup@gmail.com'
+license          'MIT'
+description      'Installs/Configures Sublime Text'
+long_description 'Installs/Configures Sublime Text'
 
 version          '0.1.0'
-
-
