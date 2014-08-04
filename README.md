@@ -15,6 +15,24 @@ Cookbook for installing Sublime Text
     <th>Description</th>
     <th>Default</th>
   </tr>
+  <tr>
+    <td>node['sublime-text]['version']</td>
+    <td>integer</td>
+    <td>The version of Sublime Text to install. Currently supports versions 2 and 3</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>node['sublime-text']['platform']['release']</td>
+    <td>string</td>
+    <td>The release of ubuntu being installed to</td>
+    <td>'trusty'</td>
+  </tr>
+  <tr>
+    <td>node['sublime-text']['platform']['architecture']</td>
+    <td>string</td>
+    <td>The hardware architecture</td>
+    <td>'amd64'</td>
+  </tr>
 </table>
 
 ## Usage

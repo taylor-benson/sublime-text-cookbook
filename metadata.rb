@@ -6,3 +6,5 @@ description      'Installs/Configures Sublime Text'
 long_description 'Installs/Configures Sublime Text'
 
 version          '0.1.0'
+
+depends 'apt', '~> 2.4.0'
