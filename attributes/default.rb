@@ -14,4 +14,4 @@ default['sublime-text']['platform']['architecture'] = 'amd64'
 
 default['sublime-text']['repository']['uri'] = "http://ppa.launchpad.net/webupd8team/sublime-text-#{node['sublime-text']['version']}/ubuntu"
 default['sublime-text']['repository']['keyserver'] = 'keyserver.ubuntu.com'
-default['sublime0text']['repository']['key'] = 'EEA14886'
+default['sublime-text']['repository']['key'] = 'EEA14886'

@@ -14,11 +14,3 @@ suites:
   - name: default
     run_list:
       - recipe[sublime-text::default]
-    attributes:
-      - { version: 2 }
-
-  - name: default
-    run_list:
-      - recipe[sublime-text::default]
-    attributes:
-      - { version: 3 }
