@@ -6,6 +6,6 @@ description      'Installs/Configures Sublime Text'
 long_description 'Installs/Configures Sublime Text'
 supports 'ubuntu', ">= 14.04"
 
-version          '0.1.0'
+version          '0.1.1'
 
 depends 'apt', '~> 2.4.0'
