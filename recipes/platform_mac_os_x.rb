@@ -7,10 +7,10 @@
 # MIT License
 #
 
-application_title = node['version']['generation'] == 2 ? "Sublime Text 2" : "Sublime Text"
+application_title = node['sublime-text']['version']['generation'] == 2 ? "Sublime Text 2" : "Sublime Text"
 
 ruby_block "dispatcher" do
-  not_if { `"/Applications/#{application_title}.app/Contents/SharedSupport/bin/subl" --version || true`.gsub("Sublime Text ", "") == node['version']['id']  }
+  not_if { `"/Applications/#{application_title}.app/Contents/SharedSupport/bin/subl" --version || true`.gsub("Sublime Text ", "") == node['sublime-text']['version']['id']  }
   notifies :delete, "file[cleanup_old_version]", :immediately
   notifies :create, "remote_file[download_sublime_dmg]", :immediately
   notifies :run, "execute[mount_sublime_dmg]", :immediately
@@ -24,13 +24,13 @@ file "cleanup_old_version" do
 end
 
 remote_file "download_sublime_dmg" do
-  path "#{Chef::Config[:file_cache_path]}/Sublime_Text_#{node['version']['id']}.dmg"
-  source "http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%20#{node['version']['id']}.dmg"
+  path "#{Chef::Config[:file_cache_path]}/Sublime_Text_#{node['sublime-text']['version']['id']}.dmg"
+  source "http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%20#{node['sublime-text']['version']['id']}.dmg"
   action :nothing
 end
 
 exectue "mount_sublime_dmg" do
-  command "hdiutil attach #{Chef::Config[:file_cache_path]}/Sublime_Text_#{node['version']['id']}.dmg"
+  command "hdiutil attach #{Chef::Config[:file_cache_path]}/Sublime_Text_#{node['sublime-text']['version']['id']}.dmg"
   action :nothing
 end
 
