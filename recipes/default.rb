@@ -7,13 +7,10 @@
 # MIT License
 #
 
-apt_repository "sublime-text-#{node['version']}" do
-  uri node['sublime-text']['repository']['uri']
-  components ['main']
-  distribution node['sublime-text']['platform']['release']
-  arch node['sublime-text']['platform']['architecture']
-  keyserver node['sublime-text']['repository']['keyserver']
-  key node['sublime-text']['repository']['key']
+begin
+  include_recipe "sublime-text::platform_#{node[:platform]}"
+rescue Chef::Exceptions::RecipeNotFound => e
+  log "!!!! This Cookbook does not support #{node[:platform]} :( !!!!"
+  raise e
 end
 
-package 'sublime-text'
