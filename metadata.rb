@@ -8,4 +8,5 @@ supports 'ubuntu', ">= 14.04"
 
 version          '0.1.1'
 
-depends 'apt', '~> 2.4.0'
+depends 'apt', '~> 2.4'
+
