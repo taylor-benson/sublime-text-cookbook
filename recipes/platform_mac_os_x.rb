@@ -10,7 +10,10 @@
 application_title = node['sublime-text']['version']['generation'] == 2 ? "Sublime Text 2" : "Sublime Text"
 
 ruby_block "dispatcher" do
-  not_if { `"/Applications/#{application_title}.app/Contents/SharedSupport/bin/subl" --version || true`.gsub("Sublime Text ", "") == node['sublime-text']['version']['id']  }
+  block do
+    # Dummy Block
+  end
+  not_if { `[ -f "/Applications/#{application_title}.app" ] && "/Applications/#{application_title}.app/Contents/SharedSupport/bin/subl" --version`.to_s.gsub("Sublime Text ", "") == node['sublime-text']['version']['id']  }
   notifies :delete, "file[cleanup_old_version]", :immediately
   notifies :create, "remote_file[download_sublime_dmg]", :immediately
   notifies :run, "execute[mount_sublime_dmg]", :immediately
@@ -29,13 +32,13 @@ remote_file "download_sublime_dmg" do
   action :nothing
 end
 
-exectue "mount_sublime_dmg" do
+execute "mount_sublime_dmg" do
   command "hdiutil attach #{Chef::Config[:file_cache_path]}/Sublime_Text_#{node['sublime-text']['version']['id']}.dmg"
   action :nothing
 end
 
 execute "install_sublime_app" do
-  command "mv '/Volumes/#{application_title}/#{application_title}.app' /Applications/"
+  command "cp -r '/Volumes/#{application_title}/#{application_title}.app' /Applications/"
   action :nothing
 end
 
