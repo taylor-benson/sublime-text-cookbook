@@ -33,6 +33,13 @@ end
 execute "install_sublime_app" do
   command "cp -r '/Volumes/#{application_title}/#{application_title}.app' /Applications/"
   action :nothing
+  notifies :run, "execute[unmount_sublime_dmg]", :immediately
+end
+
+execute "unmount_sublime_dmg" do
+  command "hdiutil detatch /Volumes/#{application_title}"
+  action :nothing
+  only_if { ::File.exists? "/Volumes/#{application_title}" }
 end
 
 link "enable_command_line_executable" do
