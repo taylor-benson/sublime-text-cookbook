@@ -20,13 +20,13 @@ ruby_block "dispatcher" do
 end
 
 remote_file "download_sublime_dmg" do
-  path "#{Chef::Config[:file_cache_path]}/Sublime_Text_#{node['sublime-text']['version']['id']}.dmg"
+  path "#{Chef::Config[:file_cache_path]}/Sublime_Text_#{node['sublime-text']['version']['id'].gsub(" ", "_")}.dmg"
   source "http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%20#{node['sublime-text']['version']['id'].gsub(" ", "%20")}.dmg"
   action :nothing
 end
 
 execute "mount_sublime_dmg" do
-  command "hdiutil attach #{Chef::Config[:file_cache_path]}/Sublime_Text_#{node['sublime-text']['version']['id']}.dmg"
+  command "hdiutil attach #{Chef::Config[:file_cache_path]}/Sublime_Text_#{node['sublime-text']['version']['id'].gsub(" ", "_")}.dmg"
   action :nothing
 end
 
