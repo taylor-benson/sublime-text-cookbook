@@ -8,9 +8,12 @@
 #
 
 default['sublime-text']['version']['generation'] = 2
-#default['sublime-text']['version']['generation'] = 3
-default['sublime-text']['version']['id'] = "2.0.2"
-#default['sublime-text']['version']['id'] = "Build 3065"
+default['sublime-text']['version']['id'] = case node['sublime-text']['version']['generation']
+                                           when 2
+                                             "2.0.2"
+                                           when 3
+                                             "Build 3065"
+                                           end 
 
 default['sublime-text']['platform']['release'] = 'trusty'
 default['sublime-text']['platform']['architecture'] = 'amd64'
