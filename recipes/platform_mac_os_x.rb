@@ -13,17 +13,10 @@ ruby_block "dispatcher" do
   block do
     # Dummy Block
   end
-  not_if { `[ -f "/Applications/#{application_title}.app" ] && "/Applications/#{application_title}.app/Contents/SharedSupport/bin/subl" --version`.to_s.gsub("Sublime Text ", "") == node['sublime-text']['version']['id']  }
-  notifies :delete, "file[cleanup_old_version]", :immediately
+  not_if { ::File.exists? "/Applications/#{application_title}.app" }
   notifies :create, "remote_file[download_sublime_dmg]", :immediately
   notifies :run, "execute[mount_sublime_dmg]", :immediately
   notifies :run, "execute[install_sublime_app]", :immediately
-  notifies :create, "link[enable_command_line_executable]", :immediately
-end
-
-file "cleanup_old_version" do
-  path "/Applications/#{application_title}.app"
-  action :nothing
 end
 
 remote_file "download_sublime_dmg" do
@@ -45,7 +38,6 @@ end
 link "enable_command_line_executable" do
   target_file "/usr/local/bin/subl"
   to "/Applications/#{application_title}.app/Contents/SharedSupport/bin/subl"
-  action :nothing
 end
 
 
