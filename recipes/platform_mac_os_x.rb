@@ -37,7 +37,7 @@ execute "install_sublime_app" do
 end
 
 execute "unmount_sublime_dmg" do
-  command "hdiutil detatch /Volumes/#{application_title}"
+  command "hdiutil detatch '/Volumes/#{application_title}'"
   action :nothing
   only_if { ::File.exists? "/Volumes/#{application_title}" }
 end
