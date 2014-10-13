@@ -5,6 +5,7 @@ Cookbook for installing Sublime Text
 ## Supported Platforms
 
 * Ubuntu 14.04
+* OS X
 
 ## Attributes
 
@@ -25,7 +26,7 @@ Cookbook for installing Sublime Text
     <td>node['sublime-text]['version']['id']</td>
     <td>string</td>
     <td>The version id of Sublime Text to install.  For Sublime Text 2, this will be a version number, and for Sublime Text 3 this will be a build number.  An appropriate default will be selected for each generation.</td>
-    <td>2.0.2 (for Sublime Text 2) or Build 3065 (for Sublime Text 3)</td>
+    <td>'2.0.2' (2) or 'Build 3065' (3)</td>
   </tr>
   <tr>
     <td>node['sublime-text']['platform']['release']</td>
