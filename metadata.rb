@@ -9,5 +9,5 @@ supports 'mac_os_x'
 
 version          '0.1.1'
 
-depends 'apt', '~> 2.4'
+depends 'apt', '>= 2.4'
 
