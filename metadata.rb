@@ -7,7 +7,7 @@ long_description 'Installs/Configures Sublime Text'
 supports 'ubuntu', ">= 14.04"
 supports 'mac_os_x'
 
-version          '0.1.1'
+version          '0.1.2'
 
 depends 'apt', '>= 2.4'
 
