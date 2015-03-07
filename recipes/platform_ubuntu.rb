@@ -7,7 +7,7 @@
 # MIT License
 #
 
-apt_repository "sublime-text-#{node['version']['generation']}" do
+apt_repository "sublime-text-#{node['sublime-text']['version']['generation']}" do
   uri node['sublime-text']['repository']['uri']
   components ['main']
   distribution node['sublime-text']['platform']['release']
