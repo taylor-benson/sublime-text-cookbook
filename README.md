@@ -67,6 +67,8 @@ Include `sublime-text` in your node's `run_list`:
 
 ## License and Authors
 
-Author:: Patrick Ayoup (patrick.ayoup@gmail.com)
-Author:: 0x783czar (Github)
-Author:: obazoud (Github)
+License: MIT
+
+* Patrick Ayoup (patrick.ayoup@gmail.com)
+* 0x783czar (Github)
+* obazoud (Github)
