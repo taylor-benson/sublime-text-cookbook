@@ -21,3 +21,6 @@ bin/*
 
 .kitchen/
 .kitchen.local.yml
+
+#MacOSX
+.DS_Store
