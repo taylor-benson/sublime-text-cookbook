@@ -1,3 +1,6 @@
+# 0.1.3
+* Added support for rhel family distros (RHEL, CentOS, etc)
+
 # 0.1.2
 
 * Added OS X functionality (contributed by 0x783czar)
