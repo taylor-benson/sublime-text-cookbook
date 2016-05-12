@@ -6,7 +6,7 @@ Cookbook for installing Sublime Text
 
 * Ubuntu 14.04
 * OS X
-* RHEL families (RHEL, CentOS, Scientic)
+* RHEL families (RHEL, CentOS, Scientific)
 
 ## Attributes
 
