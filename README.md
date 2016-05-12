@@ -6,6 +6,7 @@ Cookbook for installing Sublime Text
 
 * Ubuntu 14.04
 * OS X
+* RHEL families (RHEL, CentOS, Scientific)
 
 ## Attributes
 
@@ -40,6 +41,18 @@ Cookbook for installing Sublime Text
     <td>The hardware architecture</td>
     <td>'amd64'</td>
   </tr>
+  <tr>
+    <td>node['sublime-text']['tarball']['uri']</td>
+    <td>string</td>
+    <td>The location for Sublime Text tarballs used for linux installation. Override node['sublime-text']['platform']['architecture'] with 'x64', otherwise will default to 32 bit installation</td>
+    <td>'http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.2.tar.bz2'</td>
+  </tr>
+  <tr>
+    <td>node['sublime-text']['linux']['install_dir']</td>
+    <td>string</td>
+    <td>Installation directory used in linux</td>
+    <td>'/opt'</td>
+  </tr>
 </table>
 
 ## Usage
@@ -72,4 +85,5 @@ License: MIT
 * Patrick Ayoup (patrick.ayoup@gmail.com)
 * 0x783czar (Github)
 * obazoud (Github)
+* taylor-benson (Github)
 
