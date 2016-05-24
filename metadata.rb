@@ -1,6 +1,6 @@
 name             'sublime-text'
-maintainer       'Patrick Ayoup'
-maintainer_email 'patrick.ayoup@gmail.com'
+maintainer       'Taylor Benson'
+maintainer_email 'tbenson82@gmail.com'
 license          'MIT'
 description      'Installs/Configures Sublime Text'
 long_description 'Installs/Configures Sublime Text'

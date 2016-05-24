@@ -1,5 +1,6 @@
 # 0.1.3
-* Added support for rhel family distros (RHEL, CentOS, etc)
+
+* Added support for rhel family distros (RHEL, CentOS, etc), updated maintainer
 
 # 0.1.2
 
