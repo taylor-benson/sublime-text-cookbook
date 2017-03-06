@@ -1,4 +1,6 @@
-# sublime-text-cookbook
+sublime-text Cookbook
+=====================
+[![Cookbook Version](https://img.shields.io/cookbook/v/sublime-text.svg?style=flat)](https://supermarket.chef.io/cookbooks/sublime-text)
 
 Cookbook for installing Sublime Text
 

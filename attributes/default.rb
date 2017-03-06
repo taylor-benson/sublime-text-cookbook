@@ -24,9 +24,9 @@ default['sublime-text']['repository']['key'] = 'EEA14886'
 
 # for generic linux os platforms
 case node['sublime-text']['platform']['architecture']
-when 'x64'
-	default['sublime-text']['tarball']['uri'] = "http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.2%20x64.tar.bz2"
-else
+when 'x32'
 	default['sublime-text']['tarball']['uri'] = "http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.2.tar.bz2"
+else
+	default['sublime-text']['tarball']['uri'] = "http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.2%20x64.tar.bz2"
 end
 default['sublime-text']['linux']['install_dir'] = "/opt"

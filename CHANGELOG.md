@@ -1,3 +1,7 @@
+# 0.1.4
+
+* Add icon for linux desktop, default to x64 instead of 32
+
 # 0.1.3
 
 * Added support for rhel family distros (RHEL, CentOS, etc), updated maintainer

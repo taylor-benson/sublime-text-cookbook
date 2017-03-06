@@ -15,3 +15,11 @@ ark "sublime-text" do
   prefix_home node['sublime-text']['linux']['install_dir']
   action :install
 end
+
+#make icon
+template "/usr/share/applications/sublime-text.desktop" do
+  source 'sublime-text-menu.desktop.erb'
+  owner 'root'
+  group 'root'
+  mode '0644'
+end
