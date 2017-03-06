@@ -46,7 +46,7 @@ Cookbook for installing Sublime Text
   <tr>
     <td>node['sublime-text']['tarball']['uri']</td>
     <td>string</td>
-    <td>The location for Sublime Text tarballs used for linux installation. Override node['sublime-text']['platform']['architecture'] with 'x64', otherwise will default to 32 bit installation</td>
+    <td>The location for Sublime Text tarballs used for linux installation. Override node['sublime-text']['platform']['architecture'] with 'x32', otherwise will default to 64 bit installation</td>
     <td>'http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.2.tar.bz2'</td>
   </tr>
   <tr>
