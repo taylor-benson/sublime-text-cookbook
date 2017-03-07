@@ -1,3 +1,7 @@
+# 0.1.5
+
+* Fix spelling derp
+
 # 0.1.4
 
 * Add icon for linux desktop, default to x64 instead of 32
